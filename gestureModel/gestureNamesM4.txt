@@ -1,0 +1,14 @@
+cuppedHand
+fourFingers
+horizontalFist
+idle
+palmFacingFloor
+palmFacingFront
+palmFacingSide
+pinky&thumb
+threeFingers
+thumbFacingLeft
+thumbFacingRight
+thumbsUp
+twoFingers
+verticalFist

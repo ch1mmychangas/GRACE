@@ -1,0 +1,26 @@
+# Python environments
+venv/
+.venv/
+gesturesEnv/
+__pycache__/
+*.pyc
+
+# Model checkpoints
+*.pt
+*.onnx
+*.h5
+
+# Datasets
+gestureData/
+datasets/
+data/
+
+# IDE
+.vscode/
+
+# Secrets
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
