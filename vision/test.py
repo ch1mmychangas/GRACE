@@ -9,8 +9,13 @@ from torchvision import models, transforms
 from cvzone.HandTrackingModule import HandDetector
 
 # Device Setup
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"Using device: {device}")
+device = (
+    torch.accelerator.current_accelerator().device_type()
+    if torch.accelerator.is_available()
+    else "cpu"
+)
+
+print(f"Using device: {device.upper()}")
 
 # Load class labels
 with open("gestureModel/gestureNamesM4.txt", "r") as f:
