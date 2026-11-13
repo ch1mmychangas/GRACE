@@ -10,13 +10,15 @@ import matplotlib.pyplot as plt
 import time
 import json
 
+device = (
+    torch.accelerator.current_accelerator().device_type()
+    if torch.accelerator.is_available()
+    else "cpu"
+)
 
-print("CUDA available:", torch.cuda.is_available())
-print("CUDA version:", torch.version.cuda)
-print("Device:", torch.cuda.get_device_name(torch.cuda.current_device()) if torch.cuda.is_available() else "CPU")
+print("Hardware acceleration available: ", torch.accelerator.is_available())
+print("Device: ", device.upper())
 
-# --- Device configuration ---
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Training on: {device}")
 
 # --- Parameters ---

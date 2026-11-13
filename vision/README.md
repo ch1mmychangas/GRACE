@@ -16,10 +16,13 @@ python -m venv .venv
     source venv/bin/activate
 
 # 4. Install the dependencies:
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
+
+Note: We use `python -m` as a prefix for pip to tell the system to use the virtual environment's pip`, and not your system's global pip.
+
 
 ### Test the Model
 ```bash
-python test.py
+python test.py # no `-m` needed
 ```
